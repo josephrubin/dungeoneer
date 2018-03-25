@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class = "normalmode">
+	<head>
+		<link rel = "stylesheet" type = "text/css" href = "battle.css">
+		<title>Battle Board</title>
+		<script type = "text/javascript" src = "battle.js"></script>
+	</head>
+	<body onload = "createBoard()">
+		<div id = "addnew" class = "pop">
+			<form onsubmit="return addNew()">
+				<h3>Add New Thing</h3> <br />
+				Text: <input id = "text" type = "text" /> <br />
+				Speed: <input id = "speed" type = "number" value = "30" /> <br />
+				Ally: <input type = "checkbox" id = "ally" CHECKED /> <br />
+				On Grid: <input type = "checkbox" id = "align" CHECKED /> <br />
+				<input type = "submit" value = "Add"/>
+			</form>
+		</div>
+		<div id = "resize" class = "pop">
+			<form onsubmit="return resize()">
+				<h3>Resize</h3> <br />
+				Width: <input id = "width" type = "text" /> <br />
+				Height: <input id = "height" type = "text" /> <br />
+				<input type = "submit" value = "Resize"/>
+			</form>
+		</div>
+		<div id = "theme" class = "pop">
+			<form onsubmit="return setTheme()">
+				<h3>Set Theme</h3> <br />
+				Dungeon: <input id = "dungeon" type = "radio" name = "t" value = "1" CHECKED /> <br />
+				Wilderness: <input id = "wilderness" type = "radio" name = "t" value = "2" /> <br />
+				Castle: <input id = "castle" type = "radio" name = "t" value = "3" /> <br />
+				<input type = "submit" value = "Theme"/>
+			</form>
+		</div>
+		<div id = "board">
+			<div id = "grid"></div>
+		</div>
+	</body>
+</html>

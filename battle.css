@@ -1,0 +1,143 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+body.castle {
+	background-color: #d6d8d6;
+}
+body.dungeon {
+	background-color: #a89f1e;
+}
+body.wilderness {
+	background-color: #28e202;
+}
+
+body {
+	height: 100vh;
+}
+
+html.normalmode {
+	/*cursor: url(cursors/Wand.cur), auto;*/
+}
+html.addmode {
+	cursor: crosshair !important;
+}
+
+.cell {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 0px;
+	position: relative;
+}
+.check.castle {
+	background-color: grey;
+}
+.uncheck.castle {
+	background-color: #A9A9A9;
+}
+.check.dungeon {
+	background-color: #663300;
+}
+.uncheck.dungeon {
+	background-color: #996600;
+}
+.check.wilderness {
+	background-color: #1ead01;
+}
+.uncheck.wilderness {
+	background-color: green;
+}
+
+.movable {
+	background: rgba(0, 0, 255, 0.5);
+}
+.selectable {
+	background-color: black !important;
+}
+
+.overlay {
+	display: inline-block;
+	box-sizing: border-box;
+	border: 0px;
+	z-index: 900;
+}
+
+#board {
+	line-height: 0px;
+	text-align: center;
+	display: relative;
+}
+
+#grid.vertcenter {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#grid.horizcenter {
+	position: relative;
+}
+
+.pop {
+	display: none;
+	padding: 30px;
+	background:rgba(255,255,255,0.6);
+	position: absolute;
+	width: 200px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+
+.contents {
+	cursor: url(cursors/Gauntlet.cur), auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+.ally {
+	color: green;
+	font-weight: bold;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+.enemy {
+	color: red;
+	font-weight: bold;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.rep {
+	display: block;
+	position: absolute;
+	z-index: 800;
+	background-color: white;
+}
+
+input {
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding: 3px;
+	font-size: 1.1em;
+}
+
+input[type="text"], input[type="number"] {
+	width: 2.6em;
+}
